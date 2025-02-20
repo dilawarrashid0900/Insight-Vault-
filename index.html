@@ -1,33 +1,86 @@
-from flask import Flask, request, render_template
-import os
-import secrets
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight Vault</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4a3f35;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px 0px #aaa;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+        img {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 10px 0;
+        }
+        footer {
+            background-color: #4a3f35;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
 
-app = Flask(__name__)
+<header>
+    <h1>Insight Vault</h1>
+    <p>Graphic Design | Interior Design | Forex Trading | Network Marketing | Online Marketing</p>
+    <p>Contact: +923086490124</p>
+</header>
 
-UPLOAD_FOLDER = 'uploads'  # Create this folder
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}  # Limit allowed extensions
+<div class="container">
+    <div class="section">
+        <h2>Graphic Design Samples</h2>
+        <img src="graphic-design-sample.jpg" alt="Graphic Design Sample">
+        <p>Explore our latest graphic design projects and creative inspirations.</p>
+    </div>
 
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+    <div class="section">
+        <h2>Interior Design Samples</h2>
+        <img src="interior-design-sample.jpg" alt="Interior Design Sample">
+        <p>Discover modern interior design ideas to transform spaces.</p>
+    </div>
 
-@app.route('/', methods=['GET', 'POST'])
-def upload_file():
-    if request.method == 'POST':
-        # check if the post request has the file part
-        if 'file' not in request.files:
-            return 'No file part'
-        file = request.files['file']
-        # If the user does not select a file, the browser submits an
-        # empty file without a filename.
-        if file.filename == '':
-            return 'No selected file'
-        if file and allowed_file(file.filename):
-            extension = file.filename.rsplit('.', 1)[1].lower()
-            random_filename = secrets.token_hex(16) + '.' + extension  # Generate a random filename
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], random_filename))
-            return 'File successfully uploaded!'
-    return render_template('upload_form.html')
+    <div class="section">
+        <h2>Network Marketing & Online Marketing</h2>
+        <p>Learn the best strategies to grow your network and expand your online business.</p>
+    </div>
 
-if __name__ == '__main__':
-    app.run(debug=True)
+    <div class="section">
+        <h2>Forex Trading Details</h2>
+        <p>Get expert insights on forex trading strategies, market trends, and investment tips.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Insight Vault. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
