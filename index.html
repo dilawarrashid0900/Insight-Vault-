@@ -9,11 +9,12 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #1a1a2e;
+            color: white;
             text-align: center;
         }
         header {
-            background-color: #0073e6;
+            background-color: #16213e;
             color: white;
             padding: 20px;
             font-size: 24px;
@@ -24,56 +25,42 @@
         .container {
             max-width: 800px;
             margin: auto;
-            background: white;
+            background: #0f3460;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
         }
         footer {
-            background-color: #0073e6;
+            background-color: #16213e;
             color: white;
             padding: 10px;
             position: fixed;
             bottom: 0;
             width: 100%;
         }
-        /* Popup Styles */
-        .popup {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            display: none;
+        .logo {
+            max-width: 200px;
+            margin: 20px auto;
+            display: block;
         }
-        .popup-content {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            width: 90%;
-            max-width: 400px;
-        }
-        .popup button {
-            background-color: #0073e6;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin-top: 10px;
-            cursor: pointer;
-            border-radius: 5px;
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 20px;
+            border: 3px solid white;
         }
     </style>
 </head>
 <body>
     <header>
-        Insight Vault
+        <img src="logo.png" alt="Insight Vault Logo" class="logo">
+        <h1>Insight Vault</h1>
     </header>
     <section>
         <div class="container">
+            <img src="profile.jpg" alt="Your Picture" class="profile-pic">
             <h2>Welcome to Insight Vault</h2>
             <p>Providing services in Graphic Design, Interior Design, Forex Trading, Networking, and Online Marketing.</p>
             <p>Contact us at: <strong>+923086490124</strong></p>
@@ -82,24 +69,5 @@
     <footer>
         &copy; 2025 Insight Vault. All rights reserved.
     </footer>
-    <!-- Popup Section -->
-    <div class="popup" id="popup">
-        <div class="popup-content">
-            <h3>Special Offer from Insight Vault</h3>
-            <p>We provide premium services in Graphics, Interior Design, Trading, and Marketing.</p>
-            <button onclick="window.location.href='https://yourlink.com'">Learn More</button>
-            <br><br>
-            <button onclick="closePopup()">Close</button>
-        </div>
-    </div>
-
-    <script>
-        window.onload = function() {
-            document.getElementById("popup").style.display = "flex";
-        };
-        function closePopup() {
-            document.getElementById("popup").style.display = "none";
-        }
-    </script>
 </body>
 </html>
