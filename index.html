@@ -4,82 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insight Vault</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e;
+            color: white;
+            text-align: center;
+        }
+        header {
+            background-color: #16213e;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        section {
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #0f3460;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #16213e;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .logo {
+            max-width: 200px;
+            margin: 20px auto;
+            display: block;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 20px;
+            border: 3px solid white;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">Insight Vault</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <img src="logo.png" alt="Insight Vault Logo" class="logo">
+        <h1>Insight Vault</h1>
     </header>
-    
-    <section id="home">
-        <h1>Welcome to Insight Vault</h1>
-        <p>Your one-stop solution for design, trading, and networking.</p>
-        <a href="#shop" class="btn">Shop Now</a>
-    </section>
-    
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We provide top-notch services in graphics, interior design, and forex trading.</p>
-    </section>
-    
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Graphic Design</li>
-            <li>Interior Design</li>
-            <li>Forex Trading</li>
-            <li>Network Marketing</li>
-            <li>Online Marketing</li>
-        </ul>
-    </section>
-    
-    <section id="shop">
-        <h2>Shop</h2>
-        <p>Explore our exclusive products.</p>
-        <div class="product-grid">
-            <div class="product">
-                <img src="product1.jpg" alt="Product 1">
-                <h3>Product 1</h3>
-                <p>$19.99</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="product2.jpg" alt="Product 2">
-                <h3>Product 2</h3>
-                <p>$24.99</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
+    <section>
+        <div class="container">
+            <img src="profile.jpg" alt="Your Picture" class="profile-pic">
+            <h2>Welcome to Insight Vault</h2>
+            <p>Providing services in Graphic Design, Interior Design, Forex Trading, Networking, and Online Marketing.</p>
+            <p>Contact us at: <strong>+923086490124</strong></p>
         </div>
     </section>
-    
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Phone: +923086490124</p>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-    
     <footer>
-        <p>&copy; 2025 Insight Vault. All Rights Reserved.</p>
-        <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
-        </div>
+        &copy; 2025 Insight Vault. All rights reserved.
     </footer>
 </body>
 </html>
